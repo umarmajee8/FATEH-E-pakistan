@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { ReportProcess } from "@/components/sections/ReportProcess";
+import { InvoiceComparison } from "@/components/sections/InvoiceComparison";
 import { GetInvolved } from "@/components/sections/GetInvolved";
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
         <Hero />
         <About />
         <ReportProcess />
+        <InvoiceComparison />
         <GetInvolved />
       </main>
 
