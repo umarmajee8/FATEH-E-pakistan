@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-labelledby="logo-title logo-desc">
+  <title id="logo-title">Fateh-e-Pakistan Organization</title>
+  <desc id="logo-desc">Maroon and white circular organization seal with a crescent, shield, star, laurel, and Urdu name.</desc>
+  <defs>
+    <path id="top-arc" d="M 230 465 A 310 310 0 0 1 850 465" />
+    <path id="bottom-arc" d="M 230 465 A 310 310 0 0 0 850 465" />
+    <clipPath id="inner-seal"><circle cx="540" cy="465" r="286" /></clipPath>
+    <linearGradient id="seal-red" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8b193e" />
+      <stop offset="1" stop-color="#650b2b" />
+    </linearGradient>
+    <g id="leaf-sprig" fill="#771333" stroke="#771333" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0 0 C44 -16 82 -42 117 -79" fill="none" stroke-width="7" />
+      <path d="M19 -10 C3 -46 13 -65 48 -71 C49 -39 40 -21 19 -10Z" />
+      <path d="M45 -28 C34 -68 48 -86 83 -84 C80 -53 67 -36 45 -28Z" />
+      <path d="M71 -54 C69 -92 87 -105 119 -94 C108 -66 92 -53 71 -54Z" />
+      <path d="M20 -10 C49 2 67 0 83 -20 C57 -34 37 -29 20 -10Z" />
+      <path d="M48 -31 C78 -17 97 -21 109 -46 C80 -56 61 -49 48 -31Z" />
+      <path d="M75 -58 C105 -48 124 -56 132 -83 C102 -88 85 -77 75 -58Z" />
+    </g>
+    <g id="small-star" fill="#d1a440">
+      <path d="M0 -23 L7 -7 L23 0 L7 7 L0 23 L-7 7 L-23 0 L-7 -7Z" />
+    </g>
+  </defs>
+
+  <circle cx="540" cy="465" r="398" fill="url(#seal-red)" stroke="#4e0922" stroke-width="12" />
+  <circle cx="540" cy="465" r="376" fill="none" stroke="#f0dfe3" stroke-width="4" />
+  <circle cx="540" cy="465" r="358" fill="none" stroke="#b9778c" stroke-width="3" />
+  <circle cx="540" cy="465" r="338" fill="none" stroke="#f1e2e6" stroke-width="3" />
+
+  <text fill="#fffaf8" font-family="Georgia, 'Times New Roman', serif" font-size="49" font-weight="700" letter-spacing="9">
+    <textPath href="#top-arc" startOffset="50%" text-anchor="middle">FATEH-E-PAKISTAN</textPath>
+  </text>
+  <text fill="#fffaf8" font-family="Georgia, 'Times New Roman', serif" font-size="47" font-weight="700" letter-spacing="11">
+    <textPath href="#bottom-arc" startOffset="50%" text-anchor="middle">ORGANIZATION</textPath>
+  </text>
+
+  <circle cx="540" cy="465" r="291" fill="#fffdfd" stroke="#7b1737" stroke-width="8" />
+  <circle cx="540" cy="465" r="302" fill="none" stroke="#f4e5e8" stroke-width="8" stroke-dasharray="2 13" stroke-linecap="round" />
+
+  <g clip-path="url(#inner-seal)" stroke="#f2e3e6" stroke-width="21" opacity=".95">
+    <path d="M540 465 L540 164" />
+    <path d="M540 465 L540 164" transform="rotate(15 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(30 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(45 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(60 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(75 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(90 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(105 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(120 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(135 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(150 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(165 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(180 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(195 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(210 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(225 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(240 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(255 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(270 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(285 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(300 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(315 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(330 540 465)" />
+    <path d="M540 465 L540 164" transform="rotate(345 540 465)" />
+  </g>
+
+  <g fill="#771333">
+    <path d="M510 270 A49 49 0 1 0 570 211 A61 61 0 0 1 510 270Z" />
+    <path d="M540 168 L548 187 L569 189 L553 203 L558 224 L540 213 L522 224 L527 203 L511 189 L532 187Z" />
+  </g>
+
+  <g fill="#771333" opacity=".98">
+    <path d="M320 413 C359 400 386 407 418 432 C382 439 352 433 320 413Z" />
+    <path d="M306 447 C350 430 381 440 416 466 C376 474 343 466 306 447Z" />
+    <path d="M318 483 C357 464 390 473 419 500 C379 511 345 503 318 483Z" />
+    <path d="M347 516 C381 494 407 502 430 526 C397 543 367 538 347 516Z" />
+    <path d="M760 413 C721 400 694 407 662 432 C698 439 728 433 760 413Z" />
+    <path d="M774 447 C730 430 699 440 664 466 C704 474 737 466 774 447Z" />
+    <path d="M762 483 C723 464 690 473 661 500 C701 511 735 503 762 483Z" />
+    <path d="M733 516 C699 494 673 502 650 526 C683 543 713 538 733 516Z" />
+  </g>
+  <path d="M338 432 C373 462 392 490 414 527" fill="none" stroke="#771333" stroke-width="7" />
+  <path d="M742 432 C707 462 688 490 666 527" fill="none" stroke="#771333" stroke-width="7" />
+
+  <path d="M406 358 H674 V525 C674 590 620 641 540 679 C460 641 406 590 406 525Z" fill="#771333" stroke="#fffdfd" stroke-width="12" />
+  <path d="M423 375 H657 V521 C657 577 610 620 540 655 C470 620 423 577 423 521Z" fill="none" stroke="#f7e9ec" stroke-width="4" />
+  <path d="M540 424 L558 467 L605 470 L569 500 L580 546 L540 521 L500 546 L511 500 L475 470 L522 467Z" fill="#fffdfd" />
+  <text x="540" y="500" text-anchor="middle" fill="#771333" font-family="'Noto Nastaliq Urdu', serif" font-size="23" font-weight="600">پاکستان</text>
+
+  <use href="#leaf-sprig" transform="translate(318 654) rotate(-20) scale(.85)" />
+  <use href="#leaf-sprig" transform="translate(762 654) scale(-.85 .85) rotate(-20)" />
+  <use href="#small-star" transform="translate(218 465) scale(.72)" />
+  <use href="#small-star" transform="translate(862 465) scale(.72)" />
+  <use href="#small-star" transform="translate(540 736) scale(.85)" />
+
+  <path d="M142 875 H219 V980 H142 L177 928Z" fill="#690e30" />
+  <path d="M938 875 H861 V980 H938 L903 928Z" fill="#690e30" />
+  <rect x="207" y="850" width="666" height="132" fill="#741233" stroke="#fff8f7" stroke-width="8" />
+  <rect x="226" y="869" width="628" height="94" fill="none" stroke="#d9b3bf" stroke-width="3" />
+  <text x="540" y="941" text-anchor="middle" fill="#fffdfd" font-family="'Noto Nastaliq Urdu', serif" font-size="48" font-weight="600">فتح پاکستان آرگنائزیشن</text>
+</svg>
