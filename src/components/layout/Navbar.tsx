@@ -4,11 +4,6 @@ import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/utils/cn";
 
-const links = [
-  { href: "#about", label: "About us" },
-  { href: "#verify-fbr", label: "Verify FBR invoice" }
-];
-
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -23,7 +18,7 @@ export function Navbar() {
       }
     };
     const onResize = () => {
-      if (window.innerWidth >= 1024) setOpen(false);
+      if (window.innerWidth >= 640) setOpen(false);
     };
 
     window.addEventListener("keydown", onKeyDown);
@@ -46,27 +41,14 @@ export function Navbar() {
           <Logo urduOnly />
         </a>
 
-        <ul className="hidden items-center gap-1 lg:flex">
-          {links.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="rounded-full px-3 py-2 text-sm font-medium text-ink-600 transition-colors hover:bg-white/80 hover:text-brand-800"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-
         <div className="flex items-center gap-2">
-          <Button href="#get-involved" size="md" arrow className="hidden sm:inline-flex">
+          <Button href="#get-involved" size="md" arrow shine={false} className="hidden sm:inline-flex">
             Send a receipt
           </Button>
           <button
             ref={menuButtonRef}
             type="button"
-            className="inline-flex size-11 items-center justify-center rounded-full text-ink-900 transition hover:bg-ink-900/5 active:scale-95 lg:hidden"
+            className="inline-flex size-11 items-center justify-center rounded-full text-ink-900 transition hover:bg-ink-900/5 active:scale-95 sm:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "Close menu" : "Open menu"}
@@ -79,25 +61,12 @@ export function Navbar() {
         <div
           id="mobile-menu"
           className={cn(
-            "absolute inset-x-3 top-[calc(100%+0.5rem)] origin-top rounded-3xl border border-ink-200/70 bg-white p-3 shadow-2xl shadow-ink-950/15 transition-all duration-300 lg:hidden",
+            "absolute inset-x-3 top-[calc(100%+0.5rem)] origin-top rounded-3xl border border-ink-200/70 bg-white p-3 shadow-2xl shadow-ink-950/15 transition-all duration-300 sm:hidden",
             open ? "visible translate-y-0 scale-100 opacity-100" : "invisible -translate-y-2 scale-[0.98] opacity-0"
           )}
         >
-          <ul className="flex flex-col">
-            {links.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  onClick={closeMenu}
-                  className="flex min-h-12 items-center rounded-2xl px-4 text-base font-medium text-ink-800 transition-colors hover:bg-brand-50 hover:text-brand-800"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-2 p-1">
-            <Button href="#get-involved" size="lg" arrow className="w-full" onClick={closeMenu}>
+          <div className="p-1">
+            <Button href="#get-involved" size="lg" arrow shine={false} className="w-full" onClick={closeMenu}>
               Send a receipt
             </Button>
           </div>

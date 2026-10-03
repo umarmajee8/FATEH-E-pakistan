@@ -1,4 +1,4 @@
-import { ExternalLink, QrCode } from "lucide-react";
+import { Check, ExternalLink, QrCode } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { Accent, SectionHeading } from "@/components/ui/SectionHeading";
 
@@ -11,7 +11,7 @@ export function ReportProcess() {
           eyebrow="How to verify"
           title={
             <>
-              Verify first. <Accent>Then report responsibly.</Accent>
+              Verify first.<Accent>{" "}Then report responsibly.</Accent>
             </>
           }
           description="Use the Tax Asaan app to verify the FBR QR code, and check the invoice details listed below."
@@ -46,23 +46,39 @@ export function ReportProcess() {
 
           <div className="mt-4 border-t border-brand-200/80 pt-4">
             <p className="text-sm font-medium text-ink-700 sm:text-base">A genuine FBR invoice should include:</p>
-            <ul className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3">
-              <li className="col-span-2 flex min-h-[4.5rem] flex-col justify-center rounded-xl border border-brand-200 bg-white px-4 py-3 sm:col-span-1">
-                <span className="text-[0.65rem] font-bold uppercase tracking-[0.1em] leading-normal text-brand-800">Most important</span>
-                <p className="mt-1 text-sm font-semibold leading-normal text-ink-950">FBR e-invoice number</p>
-              </li>
-              <li className="flex min-h-[4.5rem] items-center rounded-xl border border-brand-100 bg-white px-4 py-3">
-                <p className="text-sm font-semibold leading-normal text-ink-800">FBR QR code</p>
-              </li>
-              <li className="flex min-h-[4.5rem] items-center rounded-xl border border-brand-100 bg-white px-4 py-3">
-                <p className="text-sm font-semibold leading-normal text-ink-800">POS logo</p>
-              </li>
-              <li className="flex min-h-[4.5rem] items-center rounded-xl border border-brand-100 bg-white px-4 py-3">
-                <p className="text-sm font-semibold leading-normal text-ink-800">PNTN</p>
-              </li>
-              <li className="flex min-h-[4.5rem] items-center rounded-xl border border-brand-100 bg-white px-4 py-3">
-                <p className="text-sm font-semibold leading-normal text-ink-800">NTN</p>
-              </li>
+            <ul className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3">
+              {[
+                { label: "FBR e-invoice number", important: true },
+                { label: "FBR QR code", important: false },
+                { label: "POS logo", important: false },
+                { label: "PNTN", important: false },
+                { label: "NTN", important: false },
+              ].map(({ label, important }) => (
+                <li
+                  key={label}
+                  className={`flex min-h-12 items-center gap-2 rounded-lg border bg-white px-3 py-2 ${
+                    important ? "border-brand-200" : "border-brand-100"
+                  }`}
+                >
+                  <span
+                    className={`grid size-5 shrink-0 place-items-center rounded-full ${
+                      important ? "bg-brand-100 text-brand-800" : "bg-brand-50 text-brand-700"
+                    }`}
+                  >
+                    <Check className="size-3" aria-hidden />
+                  </span>
+                  <div className="min-w-0">
+                    {important && (
+                      <span className="block text-[0.58rem] font-bold uppercase leading-tight tracking-[0.08em] text-brand-800">
+                        Most important
+                      </span>
+                    )}
+                    <p className={`text-sm font-semibold leading-snug ${important ? "text-ink-950" : "text-ink-800"}`}>
+                      {label}
+                    </p>
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
         </article>

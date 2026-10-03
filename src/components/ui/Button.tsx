@@ -9,6 +9,7 @@ type CommonProps = {
   variant?: Variant;
   size?: Size;
   arrow?: boolean;
+  shine?: boolean;
   className?: string;
   children: ReactNode;
 };
@@ -36,12 +37,12 @@ const sizes: Record<Size, string> = {
 };
 
 export function Button(props: AnchorProps | NativeButtonProps) {
-  const { variant = "primary", size = "md", arrow = false, className, children } = props;
+  const { variant = "primary", size = "md", arrow = false, shine = true, className, children } = props;
   const classes = cn(base, variants[variant], sizes[size], className);
 
   const inner = (
     <>
-      {variant === "primary" && (
+      {variant === "primary" && shine && (
         <span
           aria-hidden
           className="pointer-events-none absolute inset-y-0 left-0 w-1/3 -translate-x-[120%] skew-x-[-18deg] bg-white/30 transition-transform duration-700 ease-out group-hover:translate-x-[320%]"
@@ -56,7 +57,7 @@ export function Button(props: AnchorProps | NativeButtonProps) {
 
   if ("href" in props && props.href !== undefined) {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { variant: _v, size: _s, arrow: _a, className: _c, children: _ch, href, ...rest } = props as AnchorProps;
+    const { variant: _v, size: _s, arrow: _a, shine: _shine, className: _c, children: _ch, href, ...rest } = props as AnchorProps;
     return (
       <a href={href} className={classes} {...rest}>
         {inner}
@@ -65,7 +66,7 @@ export function Button(props: AnchorProps | NativeButtonProps) {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { variant: _v, size: _s, arrow: _a, className: _c, children: _ch, href: _h, type, ...rest } = props as NativeButtonProps;
+  const { variant: _v, size: _s, arrow: _a, shine: _shine, className: _c, children: _ch, href: _h, type, ...rest } = props as NativeButtonProps;
   return (
     <button type={type ?? "button"} className={classes} {...rest}>
       {inner}
