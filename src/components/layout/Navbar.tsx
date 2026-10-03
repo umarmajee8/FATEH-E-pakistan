@@ -8,8 +8,8 @@ const links = [
   { href: "#about", label: "About us" },
   { href: "#our-work", label: "Our work" },
   { href: "#receipt-guide", label: "Receipt guide" },
-  { href: "#approach", label: "Our approach" },
-  { href: "#impact", label: "Why it matters" },
+  { href: "#reporting", label: "How to report" },
+  { href: "#membership", label: "Membership" },
 ];
 
 export function Navbar() {

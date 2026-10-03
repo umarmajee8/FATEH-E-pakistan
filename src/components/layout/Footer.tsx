@@ -16,10 +16,11 @@ const columns = [
   {
     title: "Take part",
     links: [
+      { label: "How to report", href: "#reporting" },
       { label: "Volunteer", href: "#get-involved" },
       { label: "Partner with us", href: "#get-involved" },
       { label: "Support our work", href: "#get-involved" },
-      { label: "Questions & answers", href: "#faq" },
+      { label: "Membership, coming soon", href: "#membership" },
     ],
   },
 ];

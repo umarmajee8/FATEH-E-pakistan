@@ -5,10 +5,11 @@ import { PurposeStrip } from "@/components/sections/PurposeStrip";
 import { About } from "@/components/sections/About";
 import { OurWork } from "@/components/sections/OurWork";
 import { ReceiptGuide } from "@/components/sections/ReceiptGuide";
+import { ReportProcess } from "@/components/sections/ReportProcess";
 import { OurApproach } from "@/components/sections/OurApproach";
 import { Impact } from "@/components/sections/Impact";
 import { GetInvolved } from "@/components/sections/GetInvolved";
-import { FAQ } from "@/components/sections/FAQ";
+import { Membership } from "@/components/sections/Membership";
 
 export default function App() {
   return (
@@ -28,10 +29,11 @@ export default function App() {
         <About />
         <OurWork />
         <ReceiptGuide />
+        <ReportProcess />
         <OurApproach />
         <Impact />
         <GetInvolved />
-        <FAQ />
+        <Membership />
       </main>
 
       <Footer />
