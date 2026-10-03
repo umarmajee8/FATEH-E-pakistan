@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowRight, HandHeart, ShieldCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -7,7 +7,7 @@ export function Hero() {
     <section
       id="top"
       aria-labelledby="hero-title"
-      className="relative isolate overflow-hidden pb-16 pt-12 sm:pb-24 sm:pt-16 lg:pb-28 lg:pt-20"
+      className="relative isolate overflow-hidden pb-10 pt-8 sm:pb-14 sm:pt-10 lg:pb-16 lg:pt-12"
     >
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute -left-40 -top-48 size-[34rem] rounded-full bg-brand-100/80 blur-3xl" />
@@ -15,7 +15,7 @@ export function Hero() {
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-paper" />
       </div>
 
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14">
+      <div className="mx-auto grid max-w-7xl items-center gap-9 px-5 sm:gap-10 sm:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14">
         <div className="relative z-10 text-center lg:text-left">
           <Reveal>
             <p className="mx-auto inline-flex items-center gap-2.5 rounded-full border border-brand-200/80 bg-white/75 px-4 py-2 text-xs font-semibold tracking-wide text-brand-800 shadow-sm backdrop-blur sm:text-sm lg:mx-0">
@@ -24,48 +24,35 @@ export function Hero() {
             </p>
           </Reveal>
 
-          <Reveal delay={80}>
+          <Reveal delay={70}>
             <h1
               id="hero-title"
-              className="mx-auto mt-7 max-w-3xl text-balance text-[2.7rem] font-semibold leading-[1.02] tracking-[-0.055em] text-ink-950 sm:text-6xl lg:mx-0 lg:text-[4.45rem]"
+              className="mx-auto mt-5 max-w-3xl text-balance text-[2.7rem] font-semibold leading-[1.02] tracking-[-0.055em] text-ink-950 sm:mt-6 sm:text-6xl lg:mx-0 lg:text-[4.45rem]"
             >
               For a Pakistan where <span className="text-brand-700">public money</span> works for everyone.
             </h1>
           </Reveal>
 
-          <Reveal delay={160}>
-            <p className="mx-auto mt-6 max-w-2xl text-pretty text-base leading-relaxed text-ink-600 sm:text-lg lg:mx-0">
-              Feteh e Pakistan is a public-interest NGO advancing fair tax practices and stronger public accountability. We
-              help make the issues easier to understand, and create thoughtful ways for people to take part in positive change.
+          <Reveal delay={140}>
+            <p className="mx-auto mt-4 max-w-2xl text-pretty text-base leading-relaxed text-ink-600 sm:mt-5 sm:text-lg lg:mx-0">
+              Learn how to verify an FBR invoice and raise a receipt concern responsibly, without jumping to conclusions.
             </p>
           </Reveal>
 
-          <Reveal delay={240}>
-            <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row lg:justify-start">
+          <Reveal delay={210}>
+            <div className="mt-6 flex flex-col items-stretch justify-center gap-3 sm:flex-row lg:justify-start">
               <Button href="#get-involved" size="lg" arrow>
-                Support our work
+                Send a receipt
               </Button>
-              <Button href="#our-work" size="lg" variant="secondary" className="group">
-                Explore our work
-                <ArrowDown className="size-4 transition-transform duration-300 group-hover:translate-y-0.5" aria-hidden />
+              <Button href="#verify-fbr" size="lg" variant="secondary" className="group">
+                Verify an FBR invoice
+                <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
               </Button>
-            </div>
-          </Reveal>
-
-          <Reveal delay={320}>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-medium text-ink-500 sm:text-sm lg:justify-start">
-              <span className="inline-flex items-center gap-2">
-                <ShieldCheck className="size-4 text-brand-600" aria-hidden /> Evidence before assumptions
-              </span>
-              <span className="hidden size-1 rounded-full bg-ink-300 sm:inline-block" aria-hidden />
-              <span className="inline-flex items-center gap-2">
-                <HandHeart className="size-4 text-brand-600" aria-hidden /> People at the heart of progress
-              </span>
             </div>
           </Reveal>
         </div>
 
-        <Reveal dir="right" delay={120} className="relative mx-auto w-full max-w-[34rem] lg:max-w-none">
+        <Reveal dir="right" delay={100} className="relative mx-auto w-full max-w-[34rem] lg:max-w-none">
           <div aria-hidden className="absolute -inset-4 -z-10 rounded-[2.5rem] bg-gradient-to-br from-brand-200/60 via-transparent to-brand-100/75 blur-2xl" />
           <figure className="relative overflow-hidden rounded-[1.8rem] border-[6px] border-white bg-ink-100 shadow-[0_36px_80px_-34px_rgb(70_24_28/0.22)] sm:rounded-[2.35rem] sm:border-[8px]">
             <img
@@ -91,7 +78,7 @@ export function Hero() {
               </span>
             </figcaption>
           </figure>
-          <p className="mt-3 text-center text-[0.7rem] text-ink-400 lg:text-right">Illustrative image · community dialogue in practice</p>
+          <p className="mt-2 text-center text-[0.7rem] text-ink-400 lg:text-right">Illustrative image · community dialogue in practice</p>
         </Reveal>
       </div>
     </section>

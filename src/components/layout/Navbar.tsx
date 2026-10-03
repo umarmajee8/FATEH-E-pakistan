@@ -6,10 +6,7 @@ import { cn } from "@/utils/cn";
 
 const links = [
   { href: "#about", label: "About us" },
-  { href: "#our-work", label: "Our work" },
-  { href: "#receipt-guide", label: "Receipt guide" },
-  { href: "#reporting", label: "How to report" },
-  { href: "#membership", label: "Membership" },
+  { href: "#verify-fbr", label: "Verify FBR invoice" }
 ];
 
 export function Navbar() {
@@ -54,7 +51,7 @@ export function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="rounded-full px-3.5 py-2 text-sm font-medium text-ink-600 transition-colors hover:bg-white/80 hover:text-brand-800"
+                className="rounded-full px-3 py-2 text-sm font-medium text-ink-600 transition-colors hover:bg-white/80 hover:text-brand-800"
               >
                 {link.label}
               </a>
@@ -64,7 +61,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <Button href="#get-involved" size="md" arrow className="hidden sm:inline-flex">
-            Support our work
+            Send a receipt
           </Button>
           <button
             ref={menuButtonRef}
@@ -101,7 +98,7 @@ export function Navbar() {
           </ul>
           <div className="mt-2 p-1">
             <Button href="#get-involved" size="lg" arrow className="w-full" onClick={closeMenu}>
-              Support our work
+              Send a receipt
             </Button>
           </div>
         </div>
