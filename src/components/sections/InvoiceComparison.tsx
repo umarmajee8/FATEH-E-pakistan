@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { FileText } from "lucide-react";
-import { Accent, SectionHeading } from "@/components/ui/SectionHeading";
+import { FileText, Download } from "lucide-react";
 
 const examples = [
   {
@@ -23,24 +22,41 @@ const examples = [
   },
 ] as const;
 
-function ExampleImage({ src, alt, label }: { src: string; alt: string; label: string }) {
+function ExampleImage({ src, alt, label, tone }: { src: string; alt: string; label: string; tone: string }) {
   const [unavailable, setUnavailable] = useState(false);
 
   return (
-    <div className="grid h-[24rem] place-items-center border-y border-ink-100 bg-ink-50/70 p-3 sm:h-[30rem]">
-      {unavailable ? (
-        <div role="img" aria-label={alt} className="flex flex-col items-center gap-3 text-center text-ink-400">
-          <FileText className="size-10" aria-hidden />
-          <span className="text-sm font-medium">{label} image will appear here</span>
-        </div>
-      ) : (
-        <img
-          src={src}
-          alt={alt}
-          onError={() => setUnavailable(true)}
-          className="h-full w-full object-contain"
-        />
-      )}
+    <div className="border-y border-ink-100 bg-ink-50/70 p-4 sm:p-5">
+      {/* Download Button at the top */}
+      <a
+        href={src}
+        download
+        className={`mb-3 inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-all duration-200 hover:scale-105 ${
+          tone === "caution"
+            ? "bg-amber-100 text-amber-900 hover:bg-amber-200"
+            : "bg-brand-100 text-brand-900 hover:bg-brand-200"
+        }`}
+      >
+        <Download className="size-4" aria-hidden />
+        Download Receipt
+      </a>
+
+      <div className="flex items-center justify-center">
+        {unavailable ? (
+          <div role="img" aria-label={alt} className="flex flex-col items-center gap-3 text-center text-ink-400 py-8">
+            <FileText className="size-10" aria-hidden />
+            <span className="text-sm font-medium">{label} image will appear here</span>
+          </div>
+        ) : (
+          <img
+            src={src}
+            alt={alt}
+            onError={() => setUnavailable(true)}
+            className="w-full max-w-xs sm:max-w-sm object-contain"
+            style={{ aspectRatio: "auto" }}
+          />
+        )}
+      </div>
     </div>
   );
 }
@@ -49,16 +65,7 @@ export function InvoiceComparison() {
   return (
     <section id="invoice-comparison" aria-labelledby="invoice-comparison-title" className="py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <SectionHeading
-          id="invoice-comparison-title"
-          eyebrow="Invoice examples"
-          title={
-            <>
-              Visual clues. <Accent>Verify before reporting.</Accent>
-            </>
-          }
-          description="Compare the details shown on these example receipts. Appearance alone cannot confirm whether a sale was reported to FBR."
-        />
+        {/* SectionHeading removed as requested */}
 
         <div className="mt-8 grid gap-5 md:grid-cols-2 md:gap-6">
           {examples.map((example) => (
@@ -82,7 +89,7 @@ export function InvoiceComparison() {
                 <p className="mt-1 text-sm leading-relaxed text-ink-600">{example.description}</p>
               </div>
 
-              <ExampleImage src={example.image} alt={example.imageAlt} label={example.imageLabel} />
+              <ExampleImage src={example.image} alt={example.imageAlt} label={example.imageLabel} tone={example.tone} />
 
               <ul className="grid gap-2 p-5 sm:p-6">
                 {example.details.map((detail) => (
