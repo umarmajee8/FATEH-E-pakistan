@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FileText, Download } from "lucide-react";
-import { Accent, SectionHeading } from "@/components/ui/SectionHeading";
 
 const examples = [
   {
@@ -66,16 +65,7 @@ export function InvoiceComparison() {
   return (
     <section id="invoice-comparison" aria-labelledby="invoice-comparison-title" className="py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <SectionHeading
-          id="invoice-comparison-title"
-          eyebrow="Invoice examples"
-          title={
-            <>
-              Visual clues. <Accent>Verify before reporting.</Accent>
-            </>
-          }
-          description="Compare the details shown on these example receipts. Appearance alone cannot confirm whether a sale was reported to FBR."
-        />
+        {/* SectionHeading removed as requested */}
 
         <div className="mt-8 grid gap-5 md:grid-cols-2 md:gap-6">
           {examples.map((example) => (
